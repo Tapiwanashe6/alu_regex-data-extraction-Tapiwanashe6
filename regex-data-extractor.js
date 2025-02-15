@@ -16,3 +16,15 @@ const extractData = (text) => {
       Object.entries(patterns).map(([key, pattern]) => [key, text.match(pattern) || []])
   );
 };
+
+// Sample input text
+const sampleText = `
+  Email: user@example.com, firstname.lastname@company.co.uk
+  Phone: (123) 456-7890, 123-456-7890, 123.456.7890
+  URL: https://www.example.com, https://subdomain.example.org/page
+  Credit Card: 1234 5678 9012 3456, 1234-5678-9012-3456
+  Time: 14:30, 2:30 PM
+  HTML: <p>Paragraph</p>, <div class="example">Content</div>, <img src="image.jpg" alt="description">
+  Hashtags: #example, #ThisIsAHashtag
+  Currency: $19.99, $1,234.56
+`;
