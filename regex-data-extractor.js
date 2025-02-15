@@ -28,3 +28,6 @@ const sampleText = `
   Hashtags: #example, #ThisIsAHashtag
   Currency: $19.99, $1,234.56
 `;
+
+// Run extraction
+console.log(extractData(sampleText));
