@@ -9,3 +9,10 @@ const patterns = {
   htmlTags: /<\/?\w+.*?>/g,
   hashtags: /#\w+/g
 };
+
+// Function to extract data
+const extractData = (text) => {
+  return Object.fromEntries(
+      Object.entries(patterns).map(([key, pattern]) => [key, text.match(pattern) || []])
+  );
+};
